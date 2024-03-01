@@ -10,25 +10,33 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+		// 	let length = arr.length;
+		// 	if(length<=1){
+		// 		return "-Infinity"
+		// 	}else{
+		// 		let count = 0;
+		// 		let l1 = Number.MIN_VALUE
+		// 		let l2 =Number.MIN_VALUE 
+		// 		for(let i = 0; i < length ;i++){
+		// 		 if(arr[i]>l1){
+		// 			 l2 =l1;
+		// 			 l1 = arr[i]
+		// 		 } else if(arr[i] >l2 && arr[i] !== l1){
+		// 				 l2=arr[i]
+						 
+		// 			 }
+				 
+		// 	}
+		// 	return l2
+		// }
 			let length = arr.length;
 			if(length<=1){
 				return "-Infinity"
 			}else{
-				let count = 0;
-				let l1 = Number.MIN_VALUE
-				let l2 =Number.MIN_VALUE 
-				for(let i = 0; i < length ;i++){
-				 if(arr[i]>l1){
-					 l2 =l1;
-					 l1 = arr[i]
-				 } else if(arr[i] >l2 && arr[i] !== l1){
-						 l2=arr[i]
-						 
-					 }
-				 
+				let arr1 = arr.sort((a,b)=> b-a)
+				return arr1[1]
 			}
-			return l2
-		}
+		
 		}
 
 		function Main() {
